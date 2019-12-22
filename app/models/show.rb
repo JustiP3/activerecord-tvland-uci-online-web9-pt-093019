@@ -6,7 +6,7 @@ class Show < ActiveRecord::Base
   def actors_list 
     list = []
     Actor.all.each do |actor|
-      list << actor.full_name if actor.show == self 
+      list << actor.full_name if actor.shows.include?(self) 
     end 
   end 
 end
