@@ -8,8 +8,5 @@ class Character < ActiveRecord::Base
     "#{char} always says: #{phrase}"
   end 
   
-  def build_build_network(network = :call_letters => "Fox")
-    self.network   
-  end 
   
 end
