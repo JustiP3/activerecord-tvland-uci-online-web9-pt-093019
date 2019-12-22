@@ -10,7 +10,7 @@ class Actor < ActiveRecord::Base
     list = []
     self.characters.each do |char|
       character = char.name 
-      show = char.show 
+      show = char.show.name  
       list << "#{character} - #{show}"
     end
     list 
