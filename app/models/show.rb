@@ -8,5 +8,6 @@ class Show < ActiveRecord::Base
     Actor.all.each do |actor|
       list << actor.full_name if actor.shows.include?(self) 
     end 
+    list 
   end 
 end
