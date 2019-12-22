@@ -4,6 +4,9 @@ class Show < ActiveRecord::Base
   belongs_to :network 
   
   def actors_list 
-    self.actors.full_name 
+    list = []
+    Actor.all.each do |actor|
+      list << actor.full_name if actor.show == self 
+    end 
   end 
 end
